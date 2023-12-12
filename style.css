@@ -1,0 +1,215 @@
+:root{
+/* Color Theme Swatches in Hex */
+--Mode-1-hex: #8C7484;
+--Mode-2-hex: #00bcd4;
+--Mode-3-hex: #BAD9C8;
+--Mode-4-hex: #1A2601;
+--Mode-5-hex: #BF807A;
+
+}
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+    font-family: 'Lato', sans-serif;
+}
+body{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("./rheinradweg-nrw.jpg");
+    height: 100vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+header{
+    color: var(--Mode-4-hex);
+    background-color: whitesmoke;
+    display: flex;
+    justify-content: space-between;
+   
+}
+header h1{
+    text-align: center;
+}
+
+.header__right{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.header__right--bot{
+display: flex;
+gap: 4rem;
+align-items: center;
+}
+
+.header a{
+    text-decoration: none;
+    color: var(--Mode-2-hex);
+}
+
+.header__Mst{
+    font-family: 'Kenia', sans-serif;
+    font-size: 2.5rem;
+    color: var(--Mode-5-hex);
+    padding: .5rem;
+    line-height: 5rem;
+}
+
+.header__Logo img{
+    width: 120px;
+}
+#contactpart{
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+}
+
+.contact {
+    position: relative;
+    right: 0px;
+    bottom: 0px;
+    padding: 10px 100px;
+    display: flex;
+    align-items: flex-end;
+}
+
+
+.contact .content {
+    text-align: center;
+    position: relative;
+   
+}
+
+.contact .content h2 {
+    font-size: 36px;
+    font-weight: 500;
+    color: #000;
+    margin-bottom: 30px;
+}
+
+.container {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-radius: 10px;
+}
+
+.container .contactInfo {
+    display: flex;
+    flex-direction: column;    
+}
+
+.container .contactInfo .box {
+    position: relative;
+    padding: 20px 0;
+    display: flex;
+    margin-left: 5%;   
+}
+
+.container .contactInfo .box .icon {
+    min-width: 60px;
+    height: 60px;
+    background: var(--Mode-5-hex);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    font-size: 22px;
+}
+
+.container .contactInfo .box .text {
+    display: flex;
+    margin-left: 20px;
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--Mode-5-hex);
+    flex-direction: column;
+    font-weight: 300;
+}
+
+.container .contactInfo .box .text h3 {
+    font-weight: 500;
+    color: #00bcd4;
+}
+
+
+.contactForm {
+    width: 40%;
+    padding: 20px;
+    background-color: var(--Mode-3-hex);
+    margin-left: 10%;
+    border-radius: 5%;
+    transform: translateY(-5px); 
+}
+
+.contactForm h2 {
+    font-size: 30px;
+    color: var(--Mode-4-hex);
+    font-weight: 500;
+}
+
+.contactForm .inputBox {
+    position: relative;
+    width: 100%;
+    margin-top: 10px;
+}
+
+
+.contactForm .inputBox input, 
+.contactForm .inputBox textarea {
+    width: 100%;
+    padding: 5px 0;
+    font-size: 16px;
+    margin-top: 10px;
+    border: none;
+    border-bottom: 2px solid var(--Mode-4-hex);
+    outline: none;
+    resize: none;
+    background-color: var(--Mode-3-hex);
+}
+
+.contactForm .inputBox span {
+    position: absolute;
+    left: 0;
+    padding: 5px 0;
+    font-size: 16px;
+    margin: 10px 0;
+    pointer-events: none;
+    transition: 0.5s;
+    background-color: var(--Mode-3-hex);
+}
+
+.contactForm .inputBox input:focus ~span,
+.contactForm .inputBox input:valid ~span,
+.contactForm .inputBox textarea:focus ~span,
+.contactForm .inputBox textarea:valid ~span {
+    color: #e91e63;
+    font-size: 12px;
+    transform: translateY(-20px);
+}
+
+#app {
+    position: relative;
+    width: 130px;
+}
+
+#message {
+    color: var(--Mode-4-hex);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: left;
+    border-radius: 60px;
+    background-color: var(--Mode-5-hex);
+    transition: 0.3s ease background-color, 0.3s ease box-shadow;
+    cursor: pointer;
+    padding: 15px 10px 15px 30px;
+    font-weight: 600;
+}
+
+#message:active {
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+}
