@@ -5,84 +5,148 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mst Beratung</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="shortcut icon" href="./Logo.png" type="image/x-icon">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700;800&family=Kenia&family=Lato:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="assets/logo.png" type="image/x-icon">
     <script src="https://kit.fontawesome.com/d6d7ecfc42.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
 </head>
 <body>
-        <div class="main__container">
-            <header class="header">
-                <div class="header__Mst">MST</div>
-                <div class="header__right">
-                <h1>MST Unternehmensberatung</h1>
-                <div class="header__right--bot">
-                <div class="nav__tun"><a href="./tun.html">Was tun wir?</a></div>
-                <div class="nav__über"><a href="#">Information Über</a></div>
-                <div class="nav__kontakt"><a href="./kontakt.html">Kontakt</a></div> 
+        <div class="mainContainer">
+            <div class="headerContactContainer">
+                <header class="header">
+                    <div class="headerLogoContainer">
+                        <img
+                                draggable="false"
+                                class="headerLogo"
+                                src="assets/logo.png"
+                                alt="Logo"
+                        >
+                    </div>
+                    <div class="headerSecondContainer">
+                        <div class="headerTabs">
+                            <button class="navTun" id="navTun">
+                                <a href="#">Was tun wir?</a>
+                            </button>
+
+                            <button class="navUber" id="navUber">
+                                <a href="#">Information Über</a>
+                            </button>
+
+                            <button class="navKontakt" id="navKontakt">
+                                <a href="#">Kontakt</a>
+                            </button>
+                        </div>
+                    </div>
+                </header>
+                <div class="aboutUs" id="aboustUs">
+                    <div class="aboutUsTitle">
+                        <h1>Was tun wir?</h1>
+                    </div>
+                    <div class="aboutUsText">
+                        <p>
+                            Wir, MST Beratung, bieten kleinen Unternehmen Unterstützung bei der richtigen Anwendung von Buchhaltungs- und Finanzgrundsätzen.Unser Ziel ist es, kleinen Unternehmen wie Ihnen zu helfen, finanziellen Erfolg zu erzielen. Buchhaltung und Finanzen sind für jedes Unternehmen von entscheidender Bedeutung und können bei richtiger Anwendung nachhaltiges Wachstum und Rentabilität ermöglichen.Die Dienstleistungen, die wir Ihnen anbieten können, umfassen:Entwicklung finanzieller Strategien: Wir bieten Unterstützung bei der Entwicklung von Strategien, die Ihrem Unternehmen helfen, Ihre finanziellen Ziele zu erreichen.Finanzanalyse und Berichterstattung: Wir bieten Datenanalysen und Berichterstattung, um das Verständnis für die finanzielle Situation Ihres Unternehmens zu fördern, sodass Sie Stärken und Schwächen erkennen können.Steuerplanung und -optimierung: Wir helfen Ihnen dabei, Ihre Steuerbelastung zu minimieren und von Steuervorteilen zu profitieren.Finanzschulungen: Wir bieten Schulungen an, um Ihr und das Finanzverständnis Ihrer Mitarbeiter zu fördern.Wir sind hier, um Ihnen bei der Erreichung Ihrer finanziellen Ziele zu helfen. Wir verstehen die Bedürfnisse kleiner Unternehmen in Bezug auf Finanzen und Buchhaltung und setzen unser Fachwissen ein, um Ihren Erfolg zu fördern.Kontaktieren Sie uns gerne für weitere Informationen oder um mit uns in Kontakt zu treten. Wir freuen uns darauf, herauszufinden, wie wir Ihnen helfen können.
+                        </p>
+                    </div>
                 </div>
-                </div>
-                <div class="header__Logo"><img src="./Logo.png" alt="Logo"></div>
-            </header>
-            <div class="image"></div>
+            </div>
+            <div id="contact" class="void">
+                <section class="contact">
+                    <div class="container">
+                        <div class="contactInfo">
+                            <div class="box">
+                                <div class="icon icon-fill">
+                                    <i class="fa-solid fa-location-dot"></i>
+                                </div>
+                                <div class="text">
+                                    <h3>Addresse</h3>
+                                    <p>Dortmund/Deutschland</p>
+                                </div>
+                            </div>
+                            <div class="box">
+                                <div class="icon icon-enter">
+                                    <i class="fa-solid fa-phone"></i>
+                                </div>
+                                <div class="text">
+                                    <h3>Whatsapp</h3>
+                                    <p>0177 12345678</p>
+                                </div>
+                            </div>
+                            <div class="box">
+                                <div class="icon icon-expan">
+                                    <i class="fa-solid fa-envelope"></i>
+                                </div>
+                                <div class="text">
+                                    <h3>Email</h3>
+                                    <p>mstberatung@gmail.com</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="contactForm">
+                            <form action="#">
+                                <h2>Nachricht senden</h2>
+                                <div class="inputBox">
+                                    <input type="text" name="name" id="name" required />
+                                    <span>Name</span>
+                                </div>
+                                <div class="inputBox">
+                                    <input type="text" name="email" id="email" required />
+                                    <span>Email</span>
+                                </div>
+                                <div class="inputBox">
+                                    <textarea name="typemsg" id="typemsg" required></textarea>
+                                    <span>Nachricht eingeben</span>
+                                </div>
+                                <div class="inputBox">
+                                    <div id="app">
+                                        <div id="message">Senden</div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </section>
+            </div>
+            <script src="script.js"></script>
+            <script>
+			   $(document).ready(function () {
+				  $("#send_btn, #message").on("click", function () {
+					 if ($("#name").val() !== "" && $("#email").val() !== "" && $("#typemsg").val() !== "") {
+						setTimeout(function () {
+						   $("#message").addClass("sending").text("Sending");
+						   $("#send_btn").addClass("sending");
+						}, 0);
+
+						setTimeout(function () {
+						   $("#message").addClass("sent").text("Sent");
+						   $("#send_btn").addClass("sent");
+						}, 2600);
+
+						setTimeout(function () {
+						   $(".contactForm").css("display", "none");
+						   $(".popup").css("display", "block");
+						}, 4000);
+					 } else {
+						alert("Please fill all the blanks.");
+					 }
+				  });
+			   });
+
+			   $(document).ready(function () {
+				  $("#navTun").on("click", function () {
+					 $('html, body').animate({
+						scrollTop: $("#aboustUs").offset().top - $(".header").height() // Header yüksekliğini çıkar
+					 }, 1000);
+				  });
+
+				  $("#navKontakt").on("click", function () {
+					 $('html, body').animate({
+						scrollTop: $("#contact").offset().top - $(".header").height() // Header yüksekliğini çıkar
+					 }, 1000);
+				  });
+			   });
+            </script>
         </div>
-        <div id="contactpart" class="void">
-            <section class="contact">
-              <div class="container">
-                <div class="contactInfo">
-                  <div class="box">
-                    <div class="icon icon-fill">
-                      <i class="fa-solid fa-location-dot"></i>
-                    </div>
-                    <div class="text">
-                      <h3>Addresse</h3>
-                      <p>Dortmund/Deutschland</p>
-                    </div>
-                  </div>
-                  <div class="box">
-                    <div class="icon icon-enter">
-                      <i class="fa-solid fa-phone"></i>
-                    </div>
-                    <div class="text">
-                      <h3>Whatsapp</h3>
-                      <p>0177 12345678</p>
-                    </div>
-                  </div>
-                  <div class="box">
-                    <div class="icon icon-expan">
-                      <i class="fa-solid fa-envelope"></i>
-                    </div>
-                    <div class="text">
-                      <h3>Email</h3>
-                      <p>Mstberatung@gmail.com</p>
-                    </div>
-                  </div>
-                </div>
-                <div class="contactForm">
-                  <form action="#">
-                    <h2>Nachricht senden</h2>
-                    <div class="inputBox">
-                      <input type="text" name="name" id="name" required />
-                      <span>Name</span>
-                    </div>
-                    <div class="inputBox">
-                      <input type="text" name="email" id="email" required />
-                      <span>Email</span>
-                    </div>
-                    <div class="inputBox">
-                      <textarea name="typemsg" id="typemsg" required></textarea>
-                      <span>Nachricht eingeben</span>
-                    </div>
-                    <div class="inputBox">
-                      <div id="app">
-                        <div id="message">Senden</div>
-                      </div>
-                    </div>
-                  </form>
-                </div>
-              </div>
-            </section>
-          </div>
 </body>
 </html>
